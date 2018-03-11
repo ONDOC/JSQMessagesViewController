@@ -80,4 +80,11 @@
     return YES;
 }
 
+// prevent selecting text
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender {
+    [UIMenuController sharedMenuController].menuVisible = NO;
+    [self resignFirstResponder];
+    return NO;
+}
+
 @end

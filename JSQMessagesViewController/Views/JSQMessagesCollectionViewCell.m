@@ -167,6 +167,8 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
 
     [_tapGestureRecognizer removeTarget:nil action:NULL];
     _tapGestureRecognizer = nil;
+    
+    _checkImageView = nil;
 }
 
 #pragma mark - Collection view cell

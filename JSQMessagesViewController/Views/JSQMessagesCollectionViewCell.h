@@ -181,6 +181,8 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (weak, nonatomic, readonly, nullable) UITapGestureRecognizer *tapGestureRecognizer;
 
+@property (weak, nonatomic) IBOutlet UIImageView *checkImageView;
+
 #pragma mark - Class methods
 
 /**
