@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -26,36 +25,41 @@
                     <collectionViewLayout key="collectionViewLayout" id="dZl-7C-LHR" customClass="JSQMessagesCollectionViewFlowLayout"/>
                     <cells/>
                 </collectionView>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="BoD-Az-3DM" customClass="JSQMessagesInputToolbar">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ar-uy-VEX">
                     <rect key="frame" x="0.0" y="847" width="414" height="49"/>
-                    <items/>
-                </toolbar>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Bx-GI-ZUC">
-                    <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="yXm-oX-X6h"/>
+                    </constraints>
                 </view>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="250" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BoD-Az-3DM" customClass="JSQMessagesInputToolbar">
+                    <rect key="frame" x="0.0" y="847" width="414" height="49"/>
+                    <color key="backgroundColor" systemColor="systemGray6Color"/>
+                    <items/>
+                    <color key="barTintColor" systemColor="systemGray6Color"/>
+                </toolbar>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="0Ar-uy-VEX" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="03K-PH-cZg"/>
                 <constraint firstAttribute="trailing" secondItem="BoD-Az-3DM" secondAttribute="trailing" id="7xc-Ha-asg"/>
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="MmF-oh-Y75"/>
                 <constraint firstAttribute="trailing" secondItem="l9u-2b-4LK" secondAttribute="trailing" id="O9u-TA-A0e"/>
                 <constraint firstAttribute="bottom" secondItem="l9u-2b-4LK" secondAttribute="bottom" id="Re7-WW-UmS"/>
-                <constraint firstItem="3Bx-GI-ZUC" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="TgB-SC-iBE"/>
+                <constraint firstAttribute="bottom" secondItem="0Ar-uy-VEX" secondAttribute="bottom" id="Rle-dV-gdP"/>
+                <constraint firstAttribute="bottom" secondItem="0Ar-uy-VEX" secondAttribute="bottom" id="YqT-Hz-0Wh"/>
                 <constraint firstItem="l9u-2b-4LK" firstAttribute="top" secondItem="mUa-cS-ru4" secondAttribute="top" id="dCQ-DM-Wdj"/>
-                <constraint firstItem="3Bx-GI-ZUC" firstAttribute="top" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="dVg-Tg-1Zn"/>
+                <constraint firstAttribute="trailing" secondItem="0Ar-uy-VEX" secondAttribute="trailing" id="gEn-bX-mpc"/>
                 <constraint firstAttribute="bottom" secondItem="BoD-Az-3DM" secondAttribute="bottom" id="rHs-6q-NX4"/>
-                <constraint firstAttribute="trailing" secondItem="3Bx-GI-ZUC" secondAttribute="trailing" id="rvS-Wr-pXt"/>
                 <constraint firstItem="BoD-Az-3DM" firstAttribute="leading" secondItem="mUa-cS-ru4" secondAttribute="leading" id="ts7-8f-0lH"/>
-                <constraint firstAttribute="bottom" secondItem="3Bx-GI-ZUC" secondAttribute="bottom" id="zGd-BO-Z85"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <point key="canvasLocation" x="131.8840579710145" y="99.776785714285708"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
